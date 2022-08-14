@@ -22,6 +22,6 @@ import { LocalStrategy } from './strategies/local.strategy';
 })
 export class AuthModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer.apply(LoginValidationMiddleware).forRoutes('login');
+    consumer.apply(LoginValidationMiddleware).forRoutes('auth/login');
   }
 }
